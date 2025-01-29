@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import formstack_webhook  # Import the webhook handler
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/formstack-webhook/', formstack_webhook, name='formstack_webhook'),
 ]
